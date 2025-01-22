@@ -1,0 +1,77 @@
+body {
+    background-color: #181a20;
+    color: #eaecef;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.main {
+}
+.main__item {
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+.main__item--title {
+    align-content: center;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+.main__content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.main__item,
+.item {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+}
+.item:hover {
+    background-color: rgba(255, 251, 0, 0.1);
+}
+
+.item__total-invested,
+.item__coin,
+.item__count-coin,
+.item__average-price,
+.item__price-market,
+.item__profit,
+.item__profit-percents,
+.item__total-value,
+.item__capital-percent {
+    flex: 1 1 11%;
+    user-select: text;
+    text-align: center;
+    font-family: monospace;
+}
+.item__coin {
+}
+.item__count-coin {
+}
+.item__average-price {
+}
+.item__price-market {
+}
+.item__profit {
+}
+.item__profit-percents {
+}
+.item__total-value {
+}
+.item__capital-percent {
+}
+
+.green {
+    color: rgb(0, 164, 0);
+}
+.red {
+    color: rgb(181, 0, 0);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Binance</title>
+    <link rel="stylesheet" href="./styles/addTokenFormStyle.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="add-token">
+            <form class="add-token__form" action="">
+                <label class="add-token__label" for="ticker">
+                    Тикер монеты
+                    <input class="add-token__input" name="ticker" type="text" placeholder="Введите тикер...">
+                </label>
+                <label class="add-token__label" for="price">
+                    Цена покупки
+                    <input class="add-token__input" name="price" type="text" placeholder="Введите цену покупки...">
+                </label>
+                <label class="add-token__label" for="coins">
+                    Количество монет
+                    <input class="add-token__input" name="coins" type="text" placeholder="Введите количество монет...">
+                </label>
+                <button class="add-token__btn">Добавить</button>
+                <button class="add-token__btn delete-token__btn">Удалить</button>
+            </form>
+        </div>
+        <div class="main">
+            <div class="main__content">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./helpers/convertNumbers.js"></script>
+    <script src="./store/store.js"></script>
+    <script src="./helpers/addTokenForm.js"></script>
+    <script src="./helpers/api.js"></script>
+    <script src="./helpers/updatePrices.js"></script>
+    <script src="./CreateCoin.js"></script>
+    <script src="./helpers/addAndUpdateCoinList.js"></script>
+    <script src="./helpers/deleteAndUpdateCoinList.js"></script>
+    <script src="./helpers/drawList.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
