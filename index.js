@@ -1,26 +1,35 @@
-const divEl = document.querySelector(".main__content");
+const divEl = document.querySelector(".content__item");
+const mainTitleEl = document.querySelector(".main__item");
 const addCoinBtn = document.querySelector(".add-token__btn");
 const deleteCoinBtn = document.querySelector(".delete-token__btn");
 
-coinList.push(new CreateCoin("BTC", 1000, 1));
-coinList.push(new CreateCoin("ETH", 2000, 1));
-
 addCoinBtn.addEventListener("click", (e) => {
-    const coinFromForm = addTokenFromForm();
-
-    e.preventDefault();
-    addAndUpdateCoinList(coinList, coinFromForm);
-    updateCoinPrices(coinList).then(() => {
-        getTotalCapital();
-        DrawList(coinList, divEl);
-    });
+    const result = changeAddDeleteCoinListener(
+        coinList,
+        e,
+        addAndUpdateCoinList
+    );
+    if (result) {
+        setLocalStorage("coinList", coinList);
+    }
 });
 
 deleteCoinBtn.addEventListener("click", (e) => {
-    const coinFromForm = addTokenFromForm();
+    const result = changeAddDeleteCoinListener(
+        coinList,
+        e,
+        deleteAndUpdateCoinList
+    );
+    if (result) {
+        setLocalStorage("coinList", coinList);
+    }
+});
 
-    e.preventDefault();
-    deleteAndUpdateCoinList(coinList, coinFromForm);
+mainTitleEl.addEventListener("click", (e) => {
+    const key = e.target.dataset.data || e.target.parentElement.dataset.data;
+    let flagActiveClassSVG = false;
+    flagActiveClassSVG = addCurrentClassSVG(e, key);
+    sortData(coinList, key, flagActiveClassSVG);
     updateCoinPrices(coinList).then(() => {
         getTotalCapital();
         DrawList(coinList, divEl);
@@ -34,10 +43,16 @@ setInterval(() => {
     });
 }, 1000);
 
-// убрать дублирование в листенерах
-// сортировку по убыванию и возрастанию для каждой колонки
-// поворот стрелки если сортировка идет
-// добавить local storage
-//
-//
-//
+extractLocalStorage(coinList);
+updateCoinPrices(coinList).then(() => {
+    getTotalCapital();
+    DrawList(coinList, divEl);
+});
+
+/*
+changes: remove titleList coin from drawList.js; changes some styles for titleList; add function toggle current class for titleList; add function sordData for titleList; remove duplication code; add localStorage; add validation for input
+*/
+
+/*
+Добавить всплывающую кнопку удаления, при нажатии на строку с монетами
+*/

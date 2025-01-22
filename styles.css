@@ -15,29 +15,45 @@ body {
 .main__item--title {
     align-content: center;
     text-align: center;
+    /* font-size: 12px; */
     font-weight: 700;
     letter-spacing: 0.05rem;
 }
 .main__content {
-    display: flex;
-    flex-direction: column;
     margin: 20px;
     padding: 20px;
     border: 1px solid grey;
     border-radius: 10px;
+}
+.main__content,
+.content__item {
+    display: flex;
+    flex-direction: column;
 }
 .main__item,
 .item {
     display: flex;
     justify-content: center;
     padding: 10px;
-    gap: 10px;
+    gap: 20px;
     border-radius: 10px;
 }
 .item:hover {
     background-color: rgba(255, 251, 0, 0.1);
 }
-
+.item__title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+}
+.item__title--checked {
+    color: #f0b90b;
+}
+.item__svg--turned {
+    transform: rotate(180deg);
+    transform-origin: center;
+}
 .item__total-invested,
 .item__coin,
 .item__count-coin,
@@ -50,7 +66,18 @@ body {
     flex: 1 1 11%;
     user-select: text;
     text-align: center;
-    font-family: monospace;
+    /* font-family: monospace; */
+}
+.main__item .item__total-invested,
+.main__item .item__coin,
+.main__item .item__count-coin,
+.main__item .item__average-price,
+.main__item .item__price-market,
+.main__item .item__profit,
+.main__item .item__profit-percents,
+.main__item .item__total-value,
+.main__item .item__capital-percent {
+    user-select: none;
 }
 .item__coin {
 }

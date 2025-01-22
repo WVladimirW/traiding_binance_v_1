@@ -30,15 +30,78 @@
             </form>
         </div>
         <div class="main">
-            <div class="main__content">
+            <div class="main__content content">
+                <div class="main__item">
+                    <div class="item__total-invested main__item--title">
+                        <div class="item__title" data-data="totalInvest">
+                            Investment
+                            <img class="item__svg" src="./img/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item__coin main__item--title">
+                        <div class="item__title" data-data="name">
+                            Name
+                            <img class="item__svg" src="./img/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item__count-coin main__item--title">
+                        <div class="item__title" data-data="coinCount">
+                            Count
+                            <img class="item__svg" src="./img/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item__average-price main__item--title">
+                        <div class="item__title" data-data="buyPrice">
+                            Average
+                            <img class="item__svg" src="./img/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item__price-market main__item--title">
+                        <div class="item__title" data-data="price">
+                            Price
+                            <img class="item__svg" src="./img/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item__profit main__item--title">
+                        <div class="item__title" data-data="profit">
+                            Profit
+                            <img class="item__svg" src="./img/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item__profit-percents main__item--title">
+                        <div class="item__title" data-data="profitInPercents">
+                            Profit, %
+                            <img class="item__svg" src="./img/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item__total-value main__item--title">
+                        <div class="item__title" data-data="totalCapital">
+                            Total
+                            <img class="item__svg" src="./img/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- ДОБАВИТЬ В ОБЪЕКТЫ ДОЛЮ. ПО НЕЙ НЕ БУДЕТ СОРТИРОВКИ -->
+                    <div class="item__capital-percent main__item--title">
+                        <div class="item__title" data-data="Share, %">
+                            Share, %
+                            <img class="item__svg" src="./img/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content__item"></div>
             </div>
         </div>
     </div>
 
 
 
+    <script src="./helpers/localStorage.js"></script>
+    <script src="./helpers/formatInputValue.js"></script>
     <script src="./helpers/convertNumbers.js"></script>
+    <script src="./helpers/sortData.js"></script>
+    <script src="./helpers/addCurrentClassSVG.js"></script>
     <script src="./store/store.js"></script>
+    <script src="./helpers/changeAddDeleteCoinListener.js"></script>
     <script src="./helpers/addTokenForm.js"></script>
     <script src="./helpers/api.js"></script>
     <script src="./helpers/updatePrices.js"></script>
